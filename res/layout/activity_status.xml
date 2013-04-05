@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal"
+        android:text="@string/titleStatus"
+        android:textSize="30sp"
+        tools:context=".StatusActivity" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top|left"
+        android:layout_weight="1"
+        android:ems="10"
+        android:text="@string/hintText" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonUpdate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/textButton"
+        android:textSize="20sp" />
+
+</LinearLayout>
