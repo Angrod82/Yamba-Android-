@@ -7,5 +7,12 @@
     <string name="titleStatus">Status Update</string>
     <string name="hintText">Escriba un texto de hasta 140 caracteres</string>
     <string name="textButton">Update Satus</string>
+    <string name="_000">000</string>
+    <string name="titleUserName">Nombre de Usuario</string>
+    <string name="summaryUserName">Introduce tu nombre de usuario</string>
+    <string name="tittlePassword">Password</string>
+    <string name="summaryPassword">Introduce tu clave de acceso</string>
+    <string name="tittleApiRoot">Api URL</string>
+    <string name="summaryApiRoot">Introduce la URL de la api</string>
 
 </resources>
