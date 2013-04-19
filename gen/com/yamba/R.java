@@ -22,10 +22,12 @@ public final class R {
         public static final int textCount=0x7f080001;
     }
     public static final class layout {
-        public static final int activity_status=0x7f030000;
+        public static final int activity_pref=0x7f030000;
+        public static final int activity_status=0x7f030001;
     }
     public static final class menu {
-        public static final int activity_status=0x7f070000;
+        public static final int activity_pref=0x7f070000;
+        public static final int activity_status=0x7f070001;
     }
     public static final class string {
         public static final int _000=0x7f050007;
@@ -39,6 +41,7 @@ public final class R {
         public static final int textButton=0x7f050006;
         public static final int titleStatus=0x7f050004;
         public static final int titleUserName=0x7f050008;
+        public static final int title_activity_pref=0x7f05000e;
         public static final int title_activity_status=0x7f050003;
         public static final int tittleApiRoot=0x7f05000c;
         public static final int tittlePassword=0x7f05000a;

@@ -14,5 +14,6 @@
     <string name="summaryPassword">Introduce tu clave de acceso</string>
     <string name="tittleApiRoot">Api URL</string>
     <string name="summaryApiRoot">Introduce la URL de la api</string>
+    <string name="title_activity_pref">PrefActivity</string>
 
 </resources>
