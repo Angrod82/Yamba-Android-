@@ -15,5 +15,7 @@
     <string name="tittleApiRoot">Api URL</string>
     <string name="summaryApiRoot">Introduce la URL de la api</string>
     <string name="title_activity_pref">PrefActivity</string>
+    <string name="tittleServiceStart">Arrancar servicio</string>
+    <string name="tittleServiceStop">Parar Servicio</string>
 
 </resources>

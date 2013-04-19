@@ -18,6 +18,8 @@ public final class R {
         public static final int LinearLayout2=0x7f080000;
         public static final int buttonUpdate=0x7f080003;
         public static final int editText=0x7f080002;
+        public static final int itemServiceStart=0x7f080005;
+        public static final int itemServiceStop=0x7f080006;
         public static final int menu_settings=0x7f080004;
         public static final int textCount=0x7f080001;
     }
@@ -45,6 +47,8 @@ public final class R {
         public static final int title_activity_status=0x7f050003;
         public static final int tittleApiRoot=0x7f05000c;
         public static final int tittlePassword=0x7f05000a;
+        public static final int tittleServiceStart=0x7f05000f;
+        public static final int tittleServiceStop=0x7f050010;
     }
     public static final class style {
         public static final int AppTheme=0x7f060000;

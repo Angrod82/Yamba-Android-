@@ -37,8 +37,8 @@ public class YambaApplication extends Application implements OnSharedPreferenceC
 	public synchronized Twitter getTwitter() {
 		if (twitter == null) {
 			String username, password, apiRoot;
-			username = preferences.getString("username", "");
-			password = preferences.getString("password", "");
+			username = preferences.getString("userName", "");
+			password = preferences.getString("passWord", "");
 			apiRoot = preferences.getString("apiRoot", "http://yamba.marakana.com/api");
 			twitter = new Twitter(username, password);
 			twitter.setAPIRootUrl(apiRoot);
