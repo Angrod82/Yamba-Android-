@@ -4,12 +4,9 @@ import winterwell.jtwitter.Twitter;
 import winterwell.jtwitter.TwitterException;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -25,21 +22,19 @@ import android.widget.Toast;
 
 
 
-public class StatusActivity extends Activity implements OnClickListener, TextWatcher, OnSharedPreferenceChangeListener {
+public class StatusActivity extends Activity implements OnClickListener, TextWatcher {
 	
 	private static final String TAG = "Status Activity";
 	private Button updateButton;
 	private EditText editText;
 	private TextView textCount;
-	private Twitter twitter;
-	private SharedPreferences preferences;
 	
 	private class PostToTwitter extends AsyncTask<String, Integer, String> {
 
 		@Override
 		protected String doInBackground(String... params) {
 			try {
-				Twitter.Status status = getTwitter().setStatus(params[0]);
+				Twitter.Status status = ((YambaApplication) getApplication()).getTwitter().setStatus(params[0]);
 				return status.text;
 			}
 			catch (TwitterException e) {
@@ -70,11 +65,7 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
         textCount = (TextView) findViewById(R.id.textCount);
         textCount.setText(Integer.toString(140));
         textCount.setTextColor(Color.GREEN);
-        textCount.addTextChangedListener((android.text.TextWatcher) this);
-        twitter = new Twitter("student", "password");
-        twitter.setAPIRootUrl("http://yamba.marakana.com/api");
-        preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        preferences.registerOnSharedPreferenceChangeListener(this);
+        textCount.addTextChangedListener((android.text.TextWatcher) this);        
     }
     
     @Override
@@ -125,22 +116,6 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
 	public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {
 		// TODO Auto-generated method stub
 		
-	}
-
-	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-		twitter = null;
-	}
-	
-	private Twitter getTwitter() {
-		if (twitter == null) {
-			String username, password, apiRoot;
-			username = preferences.getString("username", "");
-			password = preferences.getString("password", "");
-			apiRoot = preferences.getString("apiRoot", "http://yamba.marakana.com/api");
-			twitter = new Twitter(username, password);
-			twitter.setAPIRootUrl(apiRoot);
-		}
-		return twitter;
 	}
 	
 }
